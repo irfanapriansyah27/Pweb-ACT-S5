@@ -6,7 +6,7 @@ const App = () => {
   const [form, setForm] = useState({ npm: '', nama: '', kelas: '', jurusan: '' });
   const [isEdit, setIsEdit] = useState(false);
 
-  const BASE_URL = 'http://localhost/project1/axios';
+  const BASE_URL = process.env.VITE_API_BASE_URL || 'http://localhost/project1/axios';
 
   useEffect(() => {
     fetchMahasiswa();
