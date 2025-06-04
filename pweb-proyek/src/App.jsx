@@ -16,7 +16,7 @@ function App() {
   const [form, setForm] = useState({ id: '', npm: '', nama: '', kelas: '', jurusan: '' });
   const [isEdit, setIsEdit] = useState(false);
 
-  const BASE_URL = 'http://localhost/project1/axios';
+  const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
